@@ -1,1 +1,1 @@
-console.log("Start Project");
+import "./scss/style.scss";

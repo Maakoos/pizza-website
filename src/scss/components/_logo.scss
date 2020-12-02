@@ -1,0 +1,13 @@
+.logo {
+  margin: 10px auto;
+  width: 80px;
+
+  @media (min-width: $bigSmartphone) {
+    width: 100px;
+  }
+
+  @media (min-width: $bigTablet) {
+    order: 2;
+    width: auto;
+  }
+}

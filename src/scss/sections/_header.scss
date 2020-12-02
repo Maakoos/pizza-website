@@ -1,0 +1,84 @@
+.header {
+  background-color: $bgColor;
+
+  padding-top: 25px;
+
+  &__contentBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width: $bigTablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__info {
+    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $bigTablet) {
+      order: 3;
+    }
+  }
+
+  &__openingHours {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+
+    &::before {
+      content: "";
+      display: block;
+      margin-right: 9px;
+      width: 4px;
+      height: 4px;
+      background-color: #46cb72;
+      border-radius: 50%;
+    }
+
+    @media (min-width: $bigSmartphone) {
+      font-size: 16px;
+    }
+
+    @media (min-width: $bigTablet) {
+      margin-right: 15px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-right: 40px;
+    }
+  }
+
+  &__phoneNumber {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 700;
+
+    &::before {
+      content: "";
+      display: block;
+      margin-right: 16px;
+      width: 20px;
+      height: 20px;
+      background: url("/src/assets/phone.svg"),
+        linear-gradient($brighterGradient);
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      box-shadow: 0px 4px 8px 0px rgba($color: #cda929, $alpha: 0.26);
+    }
+
+    @media (min-width: $bigSmartphone) {
+      font-size: 18px;
+
+      &::before {
+        width: 33px;
+        height: 33px;
+      }
+    }
+  }
+}
