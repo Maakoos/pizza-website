@@ -8,7 +8,7 @@ module.exports = {
     filename: "bundle.min.js",
     path: path.resolve(__dirname, "./dist"),
   },
-  devtool: "source-map",
+  // devtool: "source-map",
   devServer: {
     open: true,
   },
@@ -27,6 +27,14 @@ module.exports = {
             presets: [["@babel/preset-env", { targets: "defaults" }]],
           },
         },
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: "file-loader",
+          },
+        ],
       },
     ],
   },
