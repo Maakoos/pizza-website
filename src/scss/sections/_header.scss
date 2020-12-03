@@ -1,7 +1,6 @@
 .header {
-  background-color: $bgColor;
-
   padding-top: 25px;
+  background-color: $bgColor;
 
   &__contentBox {
     display: flex;
@@ -37,6 +36,12 @@
       height: 4px;
       background-color: #46cb72;
       border-radius: 50%;
+    }
+
+    &--close {
+      &::before {
+        background-color: red;
+      }
     }
 
     @media (min-width: $bigSmartphone) {
