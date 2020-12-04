@@ -1,0 +1,66 @@
+.social {
+  position: relative;
+  margin: 100px 0;
+  padding: 40px 0;
+  background-image: url("/src/assets/socialsBg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    left: 0;
+    width: 137px;
+    height: 144px;
+    background-image: url("/src/assets/tree.svg");
+    background-repeat: no-repeat;
+    opacity: 0.1;
+  }
+
+  &__instagram {
+    margin: 0 auto;
+    padding: 20px;
+    width: 330px;
+    height: 110px;
+    background: linear-gradient(45.04deg, #fd9924 -51.05%, #f65b16 134.89%);
+    color: #fff;
+    font-size: 16px;
+    border-radius: 15px;
+    box-shadow: 0px 70px 90px rgba(253, 55, 36, 0.2),
+      0px 35px 50px rgba(253, 55, 36, 0.2), 0px 20px 25px rgba(253, 55, 36, 0.2);
+
+    @media (min-width: $bigSmartphone) {
+      width: 390px;
+      height: 130px;
+      font-size: 20px;
+    }
+
+    @media (min-width: $tablet) {
+      width: 430px;
+      height: 150px;
+      font-size: 22px;
+    }
+
+    @media (min-width: $bigTablet) {
+      width: 480px;
+      height: 180px;
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(#fff, 0.1);
+    border-radius: 15px;
+  }
+
+  &__name {
+    margin-left: 10px;
+    font-weight: 700;
+  }
+}
