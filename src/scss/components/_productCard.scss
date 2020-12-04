@@ -1,0 +1,85 @@
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+  padding: 35px 25px 18px;
+  background-image: url("/src/assets/cardBorder.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  &--fadeIn {
+    animation: fadeIn 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
+
+  &__pizzaImage {
+    position: relative;
+    left: 20px;
+  }
+
+  &__header {
+    align-self: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__size {
+    font-size: 12px;
+  }
+
+  &__ingredients {
+    align-self: flex-start;
+    font-size: 12px;
+  }
+
+  &__price {
+    margin: 18px 0;
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  &__addToCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33px;
+    height: 33px;
+    background-color: #fff;
+    border: 2px solid #eceef6;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primaryColor, 10);
+    }
+
+    &:hover .productCard__shoppingBag {
+      color: #fff;
+    }
+  }
+
+  &__shoppingBag {
+    width: 12px;
+    height: 14px;
+    color: darken($primaryColor, 10);
+    transition: color 0.3s ease;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
