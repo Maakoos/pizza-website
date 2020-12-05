@@ -10,4 +10,14 @@
     order: 2;
     width: auto;
   }
+
+  &--footer {
+    margin: 0;
+    width: 65px;
+    order: 0;
+
+    @media (min-width: $bigSmartphone) {
+      width: 95px;
+    }
+  }
 }
