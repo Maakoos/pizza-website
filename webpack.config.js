@@ -8,7 +8,7 @@ module.exports = {
     filename: "bundle.min.js",
     path: path.resolve(__dirname, "./dist"),
   },
-  // devtool: "source-map",
+  devtool: "source-map",
   devServer: {
     open: true,
   },
