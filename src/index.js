@@ -3,3 +3,4 @@ import "./js/showDeliveryInfo";
 import "./js/openingDot";
 import "./js/loadMoreProducts";
 import "./js/filterProducts";
+import "./js/animations";

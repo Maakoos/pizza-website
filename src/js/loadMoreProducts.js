@@ -63,6 +63,8 @@ const dummyProductsArray = [
   },
 ];
 
+let delayAnimation = 0;
+
 const loadMoreProducts = (e) => {
   const products = document.querySelectorAll("[data-productCategory]");
   const loadItemsArray = [];
@@ -83,7 +85,7 @@ const loadMoreProducts = (e) => {
   loadItemsArray.forEach(({ img, name, ingredients, price, category }) =>
     productsList.insertAdjacentHTML(
       "beforeend",
-      `<li class="productCard productCard--fadeIn" data-productCategory='${category}'>
+      `<li class="productCard flipInLeft" data-productCategory='${category}' style="animation-delay: ${(delayAnimation += 0.2)}s;">
         <img src="${img}" alt="${name}" class="productCard__pizzaImage">
         <div class="productCard__header">
           <h3 class="productCard__name">${name}</h3>
@@ -99,6 +101,7 @@ const loadMoreProducts = (e) => {
       </li>`
     )
   );
+  delayAnimation = 0;
 };
 
 loadMoreButton.addEventListener("click", loadMoreProducts);

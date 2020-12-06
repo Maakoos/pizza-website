@@ -6,11 +6,8 @@
   padding: 35px 25px 18px;
   background-image: url("/src/assets/cardBorder.png");
   background-repeat: no-repeat;
+  opacity: 0;
   overflow: hidden;
-
-  &--fadeIn {
-    animation: fadeIn 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  }
 
   &--hide {
     display: none;
@@ -76,14 +73,5 @@
     height: 14px;
     color: darken($primaryColor, 10);
     transition: color 0.3s ease;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
