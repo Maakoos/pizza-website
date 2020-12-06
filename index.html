@@ -40,7 +40,7 @@
           <h1 class="heading" data-heading>Food delivery in Warsaw</h1>
           <p class="hero__description">If you decide to relax or have unexpected guests, call us. We make sure that your vacation is comfortable, enjoyable and delicious</p>
 
-          <div class="hero__imageWrapper">
+          <div class="hero__imageWrapper" data-heroImg>
             <img src="./src/assets/heroImg.png" alt="" class="hero__image">
             <button class="hero__button" data-deliveryButton>+</button>
             <div class="hero__deliveryInfoWrapper" data-deliveryMessage>
@@ -55,15 +55,15 @@
        
         <img src="./src/assets/prawnContour.png" alt="prawn" class="hero__prawnContour">
         <img src="./src/assets/tomatoContour.png" alt="tomato" class="hero__tomatoContour">
-        <img src="./src/assets/tomato.png" alt="tomato" class="hero__tomato">
-        <img src="./src/assets/cucumber.png" alt="cucumber" class="hero__cucumber">
+        <img src="./src/assets/tomato.png" alt="tomato" class="hero__tomato" data-vegetable>
+        <img src="./src/assets/cucumber.png" alt="cucumber" class="hero__cucumber" data-vegetable>
         <img src="./src/assets/mushroomContour.png" alt="mushroom" class="hero__mushroomContour">
-        <img src="./src/assets/mushroom.png" alt="mushroom" class="hero__mushroom">
+        <img src="./src/assets/mushroom.png" alt="mushroom" class="hero__mushroom" data-vegetable>
         <img src="./src/assets/pizzaContour.png" alt="pizza" class="hero__pizzaContour">
-        <img src="./src/assets/pepper.png" alt="pepper" class="hero__pepper">
-        <img src="./src/assets/pepper.png" alt="pepper" class="hero__pepper hero__pepper--second">
-        <img src="./src/assets/pepper.png" alt="pepper" class="hero__pepper hero__pepper--blurred">
-        <img src="./src/assets/pepperGroup.png" alt="pepper" class="hero__pepperGroup">
+        <img src="./src/assets/pepper.png" alt="pepper" class="hero__pepper" data-vegetable>
+        <img src="./src/assets/pepper.png" alt="pepper" class="hero__pepper hero__pepper--second" data-vegetable>
+        <img src="./src/assets/pepper.png" alt="pepper" class="hero__pepper hero__pepper--blurred" data-vegetable>
+        <img src="./src/assets/pepperGroup.png" alt="pepper" class="hero__pepperGroup" data-vegetable>
       </section>
     </header>
 
@@ -218,7 +218,7 @@
     </section>
 
     <section class="social">
-      <div class="social__instagram">
+      <div class="social__instagram" data-instaName>
         <p class="social__text">Instagram:<span class="social__name">@pizza_webonado</span></p>
       </div>
     </section>
@@ -227,8 +227,8 @@
       <h2 class="heading heading--contact" data-heading>Fill out the form
         and we will call you</h2>
         <form action="" class="contact__form">
-          <input type="text" name="customerName"  class="contact__formInput" placeholder="Your name">
-          <input type="tel" name="customerPhone"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required class="contact__formInput" placeholder="Phone number">
+          <input type="text" name="customerName"  class="contact__formInput" placeholder="Your name" required>
+          <input type="tel" name="customerPhone"  class="contact__formInput" placeholder="Phone number" required>
           <button type="submit" class="contact__formButton">
             Сall back
             <svg class="contact__formButtonIcon">
