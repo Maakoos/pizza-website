@@ -12,6 +12,10 @@
     animation: fadeIn 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
 
+  &--hide {
+    display: none;
+  }
+
   &__pizzaImage {
     position: relative;
     left: 20px;
