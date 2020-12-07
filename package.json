@@ -1,4 +1,5 @@
 {
+  "homepage": "https://maakoos.github.io/pizza-website",
   "name": "pizza-page",
   "version": "1.0.0",
   "description": "",
@@ -7,6 +8,7 @@
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
     "serve": "webpack serve",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -16,9 +18,12 @@
     "@babel/preset-env": "^7.12.7",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.3.2",
     "css-loader": "^5.0.1",
     "file-loader": "^6.2.0",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.3.2",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",

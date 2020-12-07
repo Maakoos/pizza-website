@@ -1,12 +1,17 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+const publicPath = "";
 
 module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "bundle.min.js",
     path: path.resolve(__dirname, "./dist"),
+    publicPath: publicPath,
   },
   devtool: "source-map",
   devServer: {
@@ -16,7 +21,7 @@ module.exports = {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
         test: /\.m?js$/,
@@ -44,6 +49,10 @@ module.exports = {
       title: "Pizza",
       filename: "index.html",
       template: "./index.html",
+    }),
+    new MiniCssExtractPlugin(),
+    new CopyPlugin({
+      patterns: [{ from: "src/assets", to: "src/assets" }],
     }),
   ],
 };
