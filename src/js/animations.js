@@ -36,6 +36,9 @@ const observer = new IntersectionObserver((entries, observer) => {
       }
 
       if (entry.target.hasAttribute("data-vegetable")) {
+        if (entry.target.classList.contains("hero__tomato")) {
+          entry.target.classList.add("bounceInTopTomato");
+        }
         delayAnimation += 0.2;
         entry.target.style.animationDelay = `${delayAnimation}s`;
         entry.target.classList.add("bounceInTop");
